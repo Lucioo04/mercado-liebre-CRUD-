@@ -23,14 +23,14 @@ const controller = {
 		const resultado = [];
 
 		products.forEach(elemento => {
-			if (elemento.name.includes(busqueda)) {
+			if (elemento.name.toLowerCase().includes(busqueda.toLowerCase())) {
 				resultado.push(elemento);
 			}
 		});
 				
 	
 	
-	res.render ('results', {resultado,toThousand,busqueda})// Do the magic
+	res.render ('results', {resultado,toThousand,busqueda,products})// Do the magic
 
 	}}
 	
