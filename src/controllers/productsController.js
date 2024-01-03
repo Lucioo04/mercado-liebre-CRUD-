@@ -35,13 +35,13 @@ const controller = {
 	store: (req, res) => {
 		const products =  getJson();
 		const product ={
-		id: products.length  + 1,
+		id: products[products.length - 1].id + 1,
 		name : req.body.name.trim(),
 		price: +req.body.price,
 		discount: +req.body.discount,
 		category: req.body.category,
 		description: req.body.description.trim(),
-		image: "no-image.jpg"
+		image: req.file ? req.file.filename : "default-image.png"
 	}; 
 		
 		products.push(product);
@@ -77,7 +77,7 @@ const controller = {
 					discount:+discount,
 					category,
 					description:description.trim(),
-					image: image ? image : product.image
+					image: req.file ? req.file.filename : product.image
 					}
 				}
 				return product;
