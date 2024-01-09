@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "lucio",
+        "apellido": "testa",
+        "email": "luciotesta@gmail.com",
+        "password": "hola"
+    },
+    {
+        "id": 2,
+        "name": "Mariana",
+        "apellido": "Lopez",
+        "email": "123@gmail.com",
+        "password": "jfhajhfjasds"
+    },
+    {
+        "id": 3,
+        "name": "Javier",
+        "apellido": "Elia",
+        "email": "javierelia3@gmail.com",
+        "password": "racingtrolazo"
+    },
+    {
+        "id": 4,
+        "name": "Javier",
+        "apellido": "Elia",
+        "email": "javierelia3@gmail.com",
+        "password": "racingtrolazo"
+    }
+]

@@ -1,0 +1,54 @@
+«<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Registro'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+    
+<div class="container products-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="products-title">Formulario de Registro</h2>
+        </div>
+    </div>
+    <div class="col-12">
+        <form action="/user/registro" method="post">
+            <div class="row product-detail">
+                <div class="col-12 col-md-6">
+                    <label for="name" class="form-label" >Nombre:</label>
+                    <input type="text" name="name" id="name" class="form-input" value = "<%= locals.old ? old.name :null  %>">
+                    <p style="color:red"><%= locals.errors && errors.name ? errors.name.msg : null %></p>
+					</div>>
+                
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" class="form-input" value = "<%= locals.old ? old.apellido :null  %>">
+                    <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">Correo electrónico:</label>
+                    <input type="email" name="email" id="email" class="form-input" value = "<%= locals.old ? old.email :null  %>">
+                    <p style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" name="password" id="password" class="form-input" value = "<%= locals.old ? old.password :null  %>">
+                    <p style="color:red"><%= locals.errors && errors.password ? errors.password.msg : null %></p>
+                
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="buy-now-button">Registrarse</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
